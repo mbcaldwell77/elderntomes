@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eldern Tomes - Collectible Fantasy & Sci-Fi Books</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: linear-gradient(135deg, #0a0e0d 0%, #1a2e1a 50%, #0d1a0d 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #c0c0c0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Subtle animated background effect */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(46, 125, 50, 0.1) 0%, transparent 50%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 600px;
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .logo {
+            max-width: 300px;
+            width: 90%;
+            height: auto;
+            margin: 0 auto 2rem;
+            filter: drop-shadow(0 0 20px rgba(46, 125, 50, 0.4));
+            animation: glow 3s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% { filter: drop-shadow(0 0 20px rgba(46, 125, 50, 0.4)); }
+            50% { filter: drop-shadow(0 0 30px rgba(46, 125, 50, 0.6)); }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #d4af37;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            letter-spacing: 2px;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: #a8c5a8;
+            margin-bottom: 2rem;
+            font-style: italic;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+
+        .redirect-message {
+            font-size: 1rem;
+            color: #c0c0c0;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+            color: #d4af37;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 8px;
+            border: 2px solid #4a7c4e;
+            box-shadow: 0 4px 15px rgba(46, 125, 50, 0.4);
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .button:hover {
+            background: linear-gradient(135deg, #388e3c 0%, #2e7d32 100%);
+            box-shadow: 0 6px 20px rgba(46, 125, 50, 0.6);
+            transform: translateY(-2px);
+            color: #fff;
+        }
+
+        .countdown {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: #8a9a8a;
+            font-style: italic;
+        }
+
+        /* Decorative elements */
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #d4af37;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .tagline { font-size: 1rem; }
+            .logo { max-width: 250px; }
+            .button { padding: 0.8rem 2rem; font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    
+    <div class="container">
+        <img src="https://lindy.nyc3.digitaloceanspaces.com/user-content/prod/owners/68e152a1b15edbcb56a1e0e9/attachments/16512099-8b1e-4071-b159-ee19925d508b-square.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=DO00QNZAZRRRMG9PUNE4%2F20251004%2Fnyc3%2Fs3%2Faws4_request&X-Amz-Date=20251004T170950Z&X-Amz-Expires=86400&X-Amz-Signature=45f92f06867ac2e212f3d488625c0cbb7a09d40922ed43ecfe32d66b957f1caa&X-Amz-SignedHeaders=host&x-id=GetObject" alt="Eldern Tomes Logo" class="logo">
+        
+        <h1>ÆLDERN TOMES</h1>
+        <p class="tagline">Collectible & First Edition Fantasy & Sci-Fi Books</p>
+        
+        <p class="redirect-message">Discover rare and collectible books from across the realms</p>
+        
+        <a href="https://www.ebay.com/str/elderntomes" class="button">Enter the Library</a>
+        
+        <p class="countdown">Redirecting in <span id="countdown">5</span> seconds...</p>
+    </div>
+
+    <script>
+        // Create twinkling stars
+        const starsContainer = document.getElementById('stars');
+        for (let i = 0; i < 50; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 3 + 's';
+            starsContainer.appendChild(star);
+        }
+
+        // Countdown and redirect
+        let seconds = 5;
+        const countdownElement = document.getElementById('countdown');
+        
+        const countdownInterval = setInterval(() => {
+            seconds--;
+            countdownElement.textContent = seconds;
+            
+            if (seconds <= 0) {
+                clearInterval(countdownInterval);
+                window.location.href = 'https://www.ebay.com/str/elderntomes';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
